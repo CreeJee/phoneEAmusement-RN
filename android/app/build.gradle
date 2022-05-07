@@ -1,5 +1,9 @@
 apply plugin: "com.android.application"
 
+// https://rnfirebase.io/crashlytics/android-setup
+apply plugin: 'com.google.gms.google-services' // apply after this line
+apply plugin: 'com.google.firebase.crashlytics'
+
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 
@@ -79,10 +83,11 @@ import org.apache.tools.ant.taskdefs.condition.Os
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: true,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/@sentry/react-native/sentry.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -241,6 +246,13 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+
+            
+            // https://rnfirebase.io/crashlytics/android-setup
+            firebaseCrashlytics {
+                nativeSymbolUploadEnabled true
+                unstrippedNativeLibsDir 'build/intermediates/merged_native_libs/release/out/lib'
+            }
         }
     }
 
@@ -289,6 +301,19 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    // firebase-setup
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
 }
 
 if (isNewArchitectureEnabled()) {

@@ -1,6 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
+import { PageWrapper } from '../component/atom/PageWrapper';
 
 export function AddCardPage() {
-    return <Text>AddCard</Text>;
+    return (
+        <PageWrapper>
+            <Text>AddCard</Text>
+        </PageWrapper>
+    );
 }

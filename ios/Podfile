@@ -19,6 +19,8 @@ target 'phoneEAmusementRN' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'RNSentry', :path => '../node_modules/@sentry/react-native'
+
   target 'phoneEAmusementRNTests' do
     inherit! :complete
     # Pods for testing

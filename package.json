@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "adb-reverse-rn": "adb reverse tcp:8081 tcp:8081",
+    "react-native-bundle-reset-cache": "react-native start --reset-cache",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
@@ -17,12 +19,14 @@
     "@emotion/native": "11.0.0",
     "@emotion/react": "11.9.0",
     "@react-native-async-storage/async-storage": "1.17.3",
+    "@react-native-firebase/analytics": "^14.9.1",
     "@react-native-firebase/app": "14.9.1",
     "@react-native-firebase/crashlytics": "14.9.1",
     "@react-navigation/bottom-tabs": "6.3.1",
     "@react-navigation/core": "6.2.1",
     "@react-navigation/native": "6.0.10",
     "@react-navigation/native-stack": "6.6.2",
+    "@sentry/react-native": "^3.4.2",
     "react": "17.0.2",
     "react-native": "0.68.1",
     "react-native-fast-image": "8.5.11",
@@ -39,7 +43,6 @@
     "@babel/runtime": "^7.17.9",
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/eslint-plugin": "^11.7.0",
-    "@types/": "react-navigation/native",
     "@types/node": "^17.0.29",
     "@types/react": "17.0.39",
     "@types/react-native": "~0.67.6",
@@ -64,5 +67,8 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "resolutions": {
+    "@types/react": "17.0.39"
   }
 }

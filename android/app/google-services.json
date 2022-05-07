@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "508579563112",
+    "project_id": "phoneeamusment-rn",
+    "storage_bucket": "phoneeamusment-rn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508579563112:android:f5b60868b6e1628d749ddd",
+        "android_client_info": {
+          "package_name": "com.phoneeamusementrn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508579563112-uiqi5gctaro17kbtddt523hoqpvu5d08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuck6O4ky4_7LzECdP2poBuOhewhTrHP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508579563112-uiqi5gctaro17kbtddt523hoqpvu5d08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

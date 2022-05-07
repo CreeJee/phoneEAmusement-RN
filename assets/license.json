@@ -17,6 +17,12 @@
         "licenseUrl": "https://github.com/react-native-async-storage/async-storage/raw/master/LICENSE",
         "parents": "phoneeamusementrn"
     },
+    "@react-native-firebase/analytics@14.9.1": {
+        "licenses": "Apache-2.0",
+        "repository": "https://github.com/invertase/react-native-firebase/tree/main/packages/analytics",
+        "licenseUrl": "https://github.com/invertase/react-native-firebase/tree/main/packages/analytics/raw/master/LICENSE",
+        "parents": "phoneeamusementrn"
+    },
     "@react-native-firebase/app@14.9.1": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/invertase/react-native-firebase/tree/main/packages/app",
@@ -51,6 +57,12 @@
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
+        "parents": "phoneeamusementrn"
+    },
+    "@sentry/react-native@3.4.2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/getsentry/sentry-react-native",
+        "licenseUrl": "https://github.com/getsentry/sentry-react-native/raw/master/LICENSE.md",
         "parents": "phoneeamusementrn"
     },
     "react-native-fast-image@8.5.11": {
