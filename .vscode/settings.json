@@ -1,0 +1,10 @@
+{ 
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true,
+      "source.fixAll.eslint": true
+    },
+    "editor.tabSize": 4,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.eol": "\n"
+  }
