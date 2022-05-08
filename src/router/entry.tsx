@@ -1,10 +1,12 @@
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import React, { useCallback, useRef } from 'react';
+import { AddCardPage } from '../page/AddCardPage';
+import { BroadcastCard } from '../page/BroadcastCard';
 import { EntryPage } from '../page/EntryPage';
 import { createLogScreen } from '../third-party/firebase';
 import { routingInstrumentation, sentryInit } from '../third-party/sentry';
 import { StackNavigator } from './navigator';
-import { RouterParamList } from './setting';
+import { RouterParamList, RouterParamListKeys } from './setting';
 
 // Construct a new instrumentation instance.
 // This is needed to communicate between the integration and React
@@ -13,7 +15,7 @@ export function Router() {
     const navigationRef = useRef<NavigationContainerRef<RouterParamList>>(null);
     // 원래 재귀로 keyof 를 해야 하지만 그렇게 중요한 부분도 아니고 현제 이상태로 냅둠
     // @TODO
-    const routeNameRef = useRef<string>();
+    const routeNameRef = useRef<RouterParamListKeys>();
     const onRouteReadySetup = useCallback(() => {
         routingInstrumentation.registerNavigationContainer(navigationRef);
         routeNameRef.current = navigationRef.current?.getCurrentRoute()?.name;
@@ -38,6 +40,16 @@ export function Router() {
                 <StackNavigator.Screen
                     name="/"
                     component={EntryPage}
+                    options={{ title: 'App' }}
+                />
+                <StackNavigator.Screen
+                    name="/addCard"
+                    component={AddCardPage}
+                    options={{ title: 'App' }}
+                />
+                <StackNavigator.Screen
+                    name="/broadcastCard"
+                    component={BroadcastCard}
                     options={{ title: 'App' }}
                 />
             </StackNavigator.Navigator>
