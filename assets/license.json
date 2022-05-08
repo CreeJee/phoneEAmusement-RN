@@ -65,6 +65,12 @@
         "licenseUrl": "https://github.com/getsentry/sentry-react-native/raw/master/LICENSE.md",
         "parents": "phoneeamusementrn"
     },
+    "react-native-eamusement@1.0.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/CreeJee/react-native-eamusement",
+        "licenseUrl": "https://github.com/CreeJee/react-native-eamusement",
+        "parents": "phoneeamusementrn"
+    },
     "react-native-fast-image@8.5.11": {
         "licenses": "(MIT AND Apache-2.0)",
         "repository": "https://github.com/DylanVann/react-native-fast-image",
